@@ -9,9 +9,10 @@
       "Courier New", monospace;
     --color-red-500: oklch(0.637 0.237 25.331);
     --spacing: 0.25rem;
-    --text-3xl: 1.875rem;
-    --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
     --font-weight-bold: 700;
+    --radius-2xl: 1rem;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
@@ -21,7 +22,9 @@
     --default-mono-font-family: var(--font-mono);
     --color-White: hsl(0, 0%, 100%);
     --color-Light-pink: hsl(275, 100%, 97%);
+    --color-Grayish-purple: hsl(292, 16%, 49%);
     --font-family: 'Work Sans',sans-serif;
+    --text-increase: 650px;
   }
 }
 @layer base {
@@ -338,6 +341,24 @@
       max-width: 96rem !important;
     }
   }
+  .my-3 {
+    margin-block: calc(var(--spacing) * 3);
+  }
+  .mt-2 {
+    margin-top: calc(var(--spacing) * 2);
+  }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
+  }
+  .mr-auto {
+    margin-right: auto;
+  }
+  .mb-4 {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+  .mb-5 {
+    margin-bottom: calc(var(--spacing) * 5);
+  }
   .box-border {
     box-sizing: border-box;
   }
@@ -425,6 +446,9 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .h-\[40px\] {
+    height: 40px;
+  }
   .h-\[40vh\] {
     height: 40vh;
   }
@@ -445,6 +469,9 @@
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
+  }
+  .w-\[40px\] {
+    width: 40px;
   }
   .w-full {
     width: 100%;
@@ -575,6 +602,9 @@
   }
   .animate-none {
     animation: none;
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .touch-pinch-zoom {
     --tw-pinch-zoom: pinch-zoom;
@@ -844,6 +874,9 @@
   .gap-3\.5 {
     gap: calc(var(--spacing) * 3.5);
   }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
   .space-y-reverse {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 1;
@@ -938,6 +971,9 @@
   .rounded {
     border-radius: 0.25rem;
   }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
   .rounded-s {
     border-start-start-radius: 0.25rem;
     border-end-start-radius: 0.25rem;
@@ -990,6 +1026,10 @@
     border-style: var(--tw-border-style);
     border-width: 1px;
   }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
   .border-4 {
     border-style: var(--tw-border-style);
     border-width: 4px;
@@ -1022,6 +1062,10 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 1px;
   }
+  .border-b-2 {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 2px;
+  }
   .border-l {
     border-left-style: var(--tw-border-style);
     border-left-width: 1px;
@@ -1049,6 +1093,9 @@
   .border-solid {
     --tw-border-style: solid;
     border-style: solid;
+  }
+  .border-Grayish-purple {
+    border-color: var(--color-Grayish-purple);
   }
   .bg-\(--my_variable\) {
     background-color: var(--my_variable);
@@ -1091,6 +1138,9 @@
   .bg-radial {
     --tw-gradient-position: in oklab;
     background-image: radial-gradient(var(--tw-gradient-stops));
+  }
+  .bg-\[url\(\/assets\/images\/icon-plus\.svg\)\] {
+    background-image: url(/assets/images/icon-plus.svg);
   }
   .bg-none {
     background-image: none;
@@ -1246,8 +1296,8 @@
   .object-top {
     object-position: top;
   }
-  .p-4 {
-    padding: calc(var(--spacing) * 4);
+  .p-8 {
+    padding: calc(var(--spacing) * 8);
   }
   .text-center {
     text-align: center;
@@ -1294,9 +1344,9 @@
   .font-family {
     font-family: var(--font-family);
   }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
   .leading-none {
     --tw-leading: 1;
@@ -1378,6 +1428,9 @@
   }
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
+  }
+  .text-Grayish-purple {
+    color: var(--color-Grayish-purple);
   }
   .capitalize {
     text-transform: capitalize;
@@ -1841,6 +1894,18 @@
 @layer theme, base, components, utilities;
 main {
   width: min(90%, 600px);
+}
+details {
+  transition: 1.4s;
+}
+details div img:nth-child(2) {
+  display: none;
+}
+details[open] div img:first-child {
+  display: none;
+}
+details[open] div img:nth-child(2) {
+  display: block;
 }
 ::marker {
   content: '';

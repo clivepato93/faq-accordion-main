@@ -16,27 +16,3 @@
 main{
     width: min(90%, 600px);
 }
-
-details{
-    transition: 1.4s;
-}
-
-details div img:nth-child(2){
-    display: none;
-}
-
-
-details[open] div img:first-child{
-    display: none;
-}
-
-details[open] div img:nth-child(2){
-    display: block;
-}
-
-.plus{
-}
-
-::marker{
-content: '';
-}

@@ -12,7 +12,7 @@
 			href="./assets/images/favicon-32x32.png"
 		/>
 		<link href="./src/output.css" rel="stylesheet" />
-
+		<script src="./script.js" defer></script>
 		<title>Frontend Mentor | FAQ accordion</title>
 
 		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -45,84 +45,44 @@
 					<img src="/assets/images/icon-star.svg" alt="" class="h-[40px] mt-2" />
 					<h1 class="text-5xl font-bold mb-5">FAQs</h1>
 				</header>
-				<details class="cursor-pointer border-b-2 border-Grayish-purple">
-					<summary
-						class="transition-all font-bold flex justify-between items-center my-3"
-					>
-						<p>What is Frontend Mentor, and how will it help me?</p>
-						<!-- <span
-							class="mr-auto plus block border-4 w-[40px] h-[40px] bg-[url(/assets/images/icon-plus.svg)]"
-						></span> -->
-						<div class="shrink-0">
-							<img src="/assets/images/icon-plus.svg" alt="" />
-							<img src="/assets/images/icon-minus.svg" alt="" />
-						</div>
-					</summary>
-
-					<p class="text-Grayish-purple">
-						Frontend Mentor offers realistic coding challenges to help
-						developers improve their frontend coding skills with projects in
-						HTML, CSS, and JavaScript. It's suitable for all levels and ideal
-						for portfolio building.
-					</p>
-				</details>
-				<details class="cursor-pointer border-b-2 border-Grayish-purple ">
-					<summary
-						class="transition-all font-bold flex justify-between items-center my-3"
-					>
-						<p>Is Frontend Mentor free?</p>
-
-						<div>
-							<img src="/assets/images/icon-plus.svg" alt="" />
-							<img src="/assets/images/icon-minus.svg" alt="" />
-						</div>
-					</summary>
-
-					<p class="text-Grayish-purple">
-						Yes, Frontend Mentor offers both free and premium coding challenges,
+				<button class="font-bold flex justify-between items-center my-3 cursor-pointer border-b-2 border-Grayish-purple w-full">What is Frontend Mentor, and how will it help me?<div class="shrink-0">
+					<img src="/assets/images/icon-plus.svg" alt="" />
+					<img src="/assets/images/icon-minus.svg" alt="" class="hidden"/>
+				</div></button>
+				<p class="text-Grayish-purple hidden">
+					Frontend Mentor offers realistic coding challenges to help
+					developers improve their frontend coding skills with projects in
+					HTML, CSS, and JavaScript. It's suitable for all levels and ideal
+					for portfolio building.
+				</p>
+				<button class="font-bold flex justify-between items-center my-3 cursor-pointer border-b-2 border-Grayish-purple w-full">Is Frontend Mentor free?<div class="shrink-0">
+					<img src="/assets/images/icon-plus.svg" alt="" />
+					<img src="/assets/images/icon-minus.svg" alt="" class="hidden"/>
+				</div></button>
+				<p class="text-Grayish-purple hidden">
+					Yes, Frontend Mentor offers both free and premium coding challenges,
 						with the free option providing access to a range of projects
 						suitable for all skill levels.
-					</p>
-				</details>
-				<details class="cursor-pointer border-b-2 border-Grayish-purple ">
-					<summary
-						class="transition-all font-bold flex justify-between items-center my-3"
-					>
-						<p>Can I use Frontend Mentor projects in my portfolio?</p>
-
-						<div class="shrink-0">
-							<img src="/assets/images/icon-plus.svg" alt="" />
-							<img src="/assets/images/icon-minus.svg" alt="" />
-						</div>
-					</summary>
-
-					<p class="text-Grayish-purple">
-						Yes, you can use projects completed on Frontend Mentor in your
+				</p>
+				<button class="font-bold flex justify-between items-center my-3 cursor-pointer border-b-2 border-Grayish-purple w-full">Can I use Frontend Mentor projects in my portfolio?<div class="shrink-0">
+					<img src="/assets/images/icon-plus.svg" alt="" />
+					<img src="/assets/images/icon-minus.svg" alt="" class="hidden"/>
+				</div></button>
+				<p class="text-Grayish-purple hidden">
+					Yes, you can use projects completed on Frontend Mentor in your
 						portfolio. It's an excellent way to showcase your skills to
 						potential employers!
-					</p>
-				</details>
-				<details class="cursor-pointer border-b-2 border-Grayish-purple  mb-4">
-					<summary
-						class="transition-all font-bold flex justify-between items-center my-3"
-					>
-						<p>
-							How can I get help if I'm stuck on a Frontend Mentor challenge?
-						</p>
+				</p>
 
-						<div class="shrink-0">
-							<img src="/assets/images/icon-plus.svg" alt="" />
-							<img src="/assets/images/icon-minus.svg" alt="" />
-						</div>
-					</summary>
-
-					<p class="text-Grayish-purple">
-						The best place to get help is inside Frontend Mentor's Discord
+				<button class="font-bold flex justify-between items-center my-3 cursor-pointer border-b-2 border-Grayish-purple w-full">How can I get help if I'm stuck on a Frontend Mentor challenge?<div class="shrink-0">
+					<img src="/assets/images/icon-plus.svg" alt="" />
+					<img src="/assets/images/icon-minus.svg" alt="" class="hidden"/>
+				</div></button>
+				<p class="text-Grayish-purple hidden">
+					The best place to get help is inside Frontend Mentor's Discord
 							community. There's a help channel where you can ask questions and
 							seek support from other community members.
-					</p>
-				</details>
-
+				</p>
 			</main>
 		</div>
 		<div class="attribution">
